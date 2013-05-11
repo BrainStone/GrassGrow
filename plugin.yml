@@ -1,0 +1,23 @@
+name: GrassGrow
+main: io.github.BrainStone.GrassGrow.GrassGrow
+version: 0.1.2
+author: The_BrainStone
+
+commands:
+  grasgrow:
+    description: Makes grass grow arround you
+    usage: |
+      /<command> enable <console only:player> [radius]
+      /<command> disable <console only:player>
+    permission: grasgrow.grow
+    permission-message: You don't have <permission>
+    aliases: [gg, GG, g_g, G_G]
+    
+permissions:
+  grasgrow.grow:
+    descrition: Let's you use the grasgrow command
+    default: false
+  grasgrow.*:
+    description: Gives you all grasgrow permissions
+    children:
+      grasgrow.grow: true
