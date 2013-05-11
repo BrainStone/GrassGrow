@@ -10,7 +10,7 @@ import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public class GrassGrow extends JavaPlugin {
-	private static final String VERSION = "1.2.0";
+	private static final String VERSION = "1.2.1";
 	private static int defaultRadius;
 
 	private void info(String... msg) {
@@ -127,6 +127,7 @@ public class GrassGrow extends JavaPlugin {
 
 		GrassGrowListener.map = new HashMap<String, GrowInformation>();
 		this.loadConfig();
+		getServer().getPluginManager().registerEvents(new GrassGrowListener(), this);
 
 		this.info("GrasGrow v" + VERSION + " has been enabled!",
 				"© by The_BrainStone, 2013", "Enjoy the unlimited Grass-Power!");
