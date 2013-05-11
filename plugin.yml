@@ -1,6 +1,6 @@
 name: GrassGrow
 main: io.github.BrainStone.GrassGrow.GrassGrow
-version: 0.1.2
+version: 1.0.1
 author: The_BrainStone
 
 commands:
