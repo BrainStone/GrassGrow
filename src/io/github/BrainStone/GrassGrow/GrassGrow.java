@@ -10,7 +10,7 @@ import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public class GrassGrow extends JavaPlugin {
-	private static final String VERSION = "1.7.0";
+	private static final String VERSION = "1.8.0";
 	private static int defaultRadius;
 
 	public void info(Object... msg) {
@@ -67,7 +67,8 @@ public class GrassGrow extends JavaPlugin {
 					GrassGrowListener.map.put(p.getName(), new GrowInformation(
 							radius));
 
-					p.sendMessage("§5Feel the flower power!");
+					p.sendMessage("§5Feel the flower power! (Radius: "
+							+ String.valueOf(radius) + ")");
 				} else if (action.equalsIgnoreCase("disable")
 						|| action.equalsIgnoreCase("dis")) {
 					if (args.length == 2) {
@@ -116,7 +117,8 @@ public class GrassGrow extends JavaPlugin {
 					GrassGrowListener.map.put(target.getName(),
 							new GrowInformation(radius));
 
-					sender.sendMessage("§5Feel the flower power!");
+					sender.sendMessage("§5Feel the flower power! (Radius: "
+							+ String.valueOf(radius) + ")");
 				} else if (action.equalsIgnoreCase("disable")
 						|| action.equalsIgnoreCase("dis")) {
 					if (args.length == 3) {

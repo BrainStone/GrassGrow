@@ -15,6 +15,10 @@ public class GrowInformation {
 		OldPos = null;
 	}
 
+	public void addPos(Location loc) {
+		Pos.add(new xzCoordinates(loc));
+	}
+
 	public boolean isOldPosition(Location loc) {
 		final boolean output = (OldPos == null)
 				|| ((loc.getBlockX() == OldPos.getBlockX()) && (loc.getBlockZ() == OldPos

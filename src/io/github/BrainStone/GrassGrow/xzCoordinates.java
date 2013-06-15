@@ -21,8 +21,11 @@ public class xzCoordinates {
 			final xzCoordinates tmp = (xzCoordinates) par;
 
 			return (x == tmp.x) && (z == tmp.z);
-		} else if (par instanceof Location)
-			return this.equals(new xzCoordinates((Location) par));
+		} else if (par instanceof Location) {
+			final Location tmp = (Location) par;
+
+			return (x == tmp.getBlockX()) && (z == tmp.getBlockZ());
+		}
 
 		return false;
 	}

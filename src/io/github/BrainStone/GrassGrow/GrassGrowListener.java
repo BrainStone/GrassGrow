@@ -65,11 +65,9 @@ public class GrassGrowListener implements Listener {
 				try {
 					tmp.setZ(z);
 
-					loc = this.findGrass(tmp);
-
-					if ((loc != null) && !info.Pos.contains(loc)) {
-						info.Pos.add(new xzCoordinates(loc));
-
+					if (!info.Pos.contains(new xzCoordinates(tmp))
+							&& ((loc = this.findGrass(tmp)) != null)) {
+						info.addPos(loc);
 						loc.setY(loc.getBlockY() + 1);
 
 						final int id = w.getBlockAt(loc).getTypeId();
